@@ -9,7 +9,7 @@ import ParaBanner from '@/components/parallax';
 
 export default function AboutPage() {
   return (
-    <Box>
+    <Box sx={{ mt: -4 }}>
       {/* Hero Section */}
       <Box
         sx={{
@@ -24,7 +24,7 @@ export default function AboutPage() {
       >
         <ParaBanner
           url="https://images.squarespace-cdn.com/content/v1/5aceb3075ffd20be26cc1d42/1651158785741-NPXSW8PET4PDHBL5941S/DRM_7183.JPG?format=2500w"
-          headline="BIO"
+          headline="About Us"
           subtext="Learn more!"
         />
       </Box>

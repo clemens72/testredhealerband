@@ -7,7 +7,6 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import HomeIcon from '@mui/icons-material/Home'
-//import Image from 'next/image';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -21,9 +20,7 @@ import { useRouter } from 'next/navigation';
 const drawerWidth = 240;
 
 export default function TopBar() {
-
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
   const router = useRouter();
 
   const handleNavClick = (path: string) => {
@@ -108,13 +105,12 @@ export default function TopBar() {
           >
             <img src="https://images.squarespace-cdn.com/content/v1/5aceb3075ffd20be26cc1d42/1615165152734-GPST9RZBB0MBACQBVDDJ/image-asset.png" alt="Red Healer Logo" height={30} width={30} onClick={() => router.push('/')}/>
           </Box>
-          <Divider />
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            <Button sx={{ color: '#fff' }} onClick={() => handleNavClick('/')}>Home</Button>
-            <Button sx={{ color: '#fff' }} onClick={() => handleNavClick('/about')}>About</Button>
-            <Button sx={{ color: '#fff' }} onClick={() => handleNavClick('/media')}>Media</Button>
-            <Button sx={{ color: '#fff' }} onClick={() => handleNavClick('/live')}>Live</Button>
-            <Button sx={{ color: '#fff' }} onClick={() => handleNavClick('/contact')}>Contact</Button>
+            <Button onClick={() => handleNavClick('/')}>Home</Button>
+            <Button onClick={() => handleNavClick('/about')}>About</Button>
+            <Button onClick={() => handleNavClick('/media')}>Media</Button>
+            <Button onClick={() => handleNavClick('/live')}>Live</Button>
+            <Button onClick={() => handleNavClick('/contact')}>Contact</Button>
           </Box>
         </Toolbar>
       </AppBar>

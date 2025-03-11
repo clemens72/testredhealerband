@@ -13,45 +13,54 @@ interface ParallaxProps {
 export default function ParaBanner({ url, headline, subtext }: ParallaxProps) {
     return (
         <ParallaxBanner
-            style={{ height: '100%', margin: 'auto'}}
             layers={[
-                { image: url, speed: -45 },
+                {
+                    image: url,
+                    speed: -20,
+                    expanded: false,
+                    opacity: [1, 1],
+                    scale: [1, 1.2],
+                },
                 {
                     children: (
                         <Box
                             sx={{
-                                textAlign: 'center',
-                                color: 'white',
-                                padding: '0 20px',
+                                position: 'absolute',
+                                inset: 0,
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'center',
                                 alignItems: 'center',
-                                inset: '0',
-                                height: '100%',
-                                position: 'relative'
+                                color: 'white',
+                                backgroundColor: 'rgba(0,0,0,0.3)',
                             }}
                         >
                             <Typography variant="h1" sx={{
                                 fontSize: { xs: '2.5rem', md: '3.5rem' },
                                 color: 'white',
+                                textAlign: 'center',
                                 textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-                                position: 'relative',
-                                top: '30%',
-                                pb: '6'
+                                mb: 2
                             }}>
                                 {headline}
                             </Typography>
                             <Typography variant="h5" sx={{
                                 color: 'white',
+                                textAlign: 'center',
                                 textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
-                                position: 'relative',
-                                top: '30%'
                             }}>
                                 {subtext}
                             </Typography>
                         </Box>
-                    )
+                    ),
+                    speed: -10,
                 }
             ]}
-        >
-        </ParallaxBanner>
+            className="aspect-[2/1]"
+            style={{
+                height: '100%',
+                width: '100%',
+            }}
+        />
     );
 }

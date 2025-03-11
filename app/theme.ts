@@ -3,58 +3,143 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
+    mode: 'light',
     primary: {
-      main: '#624044',
-      contrastText: '#fff',
+      main: '#1C1C1C',
+      light: '#2D2D2D',
+      dark: '#000000',
+      contrastText: '#FFFFFF',
     },
     secondary: {
-      main: '#333333',
+      main: '#A67C52',
+      light: '#BF9B77',
+      dark: '#8C5E2D',
+      contrastText: '#FFFFFF',
     },
     background: {
-      default: '#ffffff',
+      default: '#FFFFFF',
+      paper: '#FFFFFF',
+    },
+    text: {
+      primary: '#1C1C1C',
+      secondary: '#666666',
     },
   },
   typography: {
-    fontFamily: '"Merriweather", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Inter", "Helvetica Neue", Arial, sans-serif',
     h1: {
-      fontSize: '3.5rem',
-      fontWeight: 700,
-      color: '#333333',
+      fontFamily: '"Playfair Display", Georgia, serif',
+      fontSize: '4rem',
+      fontWeight: 400,
+      letterSpacing: '-0.01562em',
+      color: '#1C1C1C',
     },
     h2: {
-      fontSize: '2.5rem',
-      fontWeight: 600,
-      color: '#333333',
+      fontFamily: '"Playfair Display", Georgia, serif',
+      fontSize: '3rem',
+      fontWeight: 400,
+      letterSpacing: '-0.00833em',
+      color: '#1C1C1C',
     },
     h3: {
-      fontSize: '2rem',
-      fontWeight: 500,
-      color: '#333333',
+      fontFamily: '"Playfair Display", Georgia, serif',
+      fontSize: '2.5rem',
+      fontWeight: 400,
+      letterSpacing: '0em',
+      color: '#1C1C1C',
     },
     h4: {
-      fontSize: '1.75rem',
-      fontWeight: 500,
-      color: '#333333',
-      marginBottom: '1rem',
+      fontFamily: '"Playfair Display", Georgia, serif',
+      fontSize: '2rem',
+      fontWeight: 400,
+      letterSpacing: '0.00735em',
+      color: '#1C1C1C',
     },
     h5: {
-      fontSize: '1.25rem',
+      fontFamily: '"Inter", "Helvetica Neue", Arial, sans-serif',
+      fontSize: '1.5rem',
       fontWeight: 400,
-      color: '#666666',
-      lineHeight: 1.6,
+      letterSpacing: '0em',
+      color: '#1C1C1C',
     },
     h6: {
-      fontSize: '1.1rem',
-      fontWeight: 'normal',
+      fontFamily: '"Inter", "Helvetica Neue", Arial, sans-serif',
+      fontSize: '1.25rem',
+      fontWeight: 500,
+      letterSpacing: '0.0075em',
+      color: '#1C1C1C',
+    },
+    subtitle1: {
+      fontFamily: '"Inter", "Helvetica Neue", Arial, sans-serif',
+      fontSize: '1rem',
+      fontWeight: 400,
+      letterSpacing: '0.00938em',
       color: '#666666',
-      lineHeight: 1.6,
+    },
+    subtitle2: {
+      fontFamily: '"Inter", "Helvetica Neue", Arial, sans-serif',
+      fontSize: '0.875rem',
+      fontWeight: 500,
+      letterSpacing: '0.00714em',
+      color: '#666666',
     },
     body1: {
+      fontFamily: '"Inter", "Helvetica Neue", Arial, sans-serif',
       fontSize: '1rem',
-      color: '#666666',
+      fontWeight: 400,
+      letterSpacing: '0.00938em',
       lineHeight: 1.7,
+      color: '#666666',
+    },
+    body2: {
+      fontFamily: '"Inter", "Helvetica Neue", Arial, sans-serif',
+      fontSize: '0.875rem',
+      fontWeight: 400,
+      letterSpacing: '0.01071em',
+      color: '#666666',
+    },
+    button: {
+      fontFamily: '"Inter", "Helvetica Neue", Arial, sans-serif',
+      fontSize: '0.875rem',
+      fontWeight: 500,
+      letterSpacing: '0.02857em',
+      textTransform: 'uppercase',
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 0,
+          padding: '12px 24px',
+        },
+        contained: {
+          backgroundColor: '#1C1C1C',
+          color: '#FFFFFF',
+          '&:hover': {
+            backgroundColor: '#2D2D2D',
+          },
+        },
+        outlined: {
+          borderColor: '#1C1C1C',
+          color: '#1C1C1C',
+          '&:hover': {
+            backgroundColor: 'rgba(28, 28, 28, 0.04)',
+          },
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#FFFFFF',
+          color: '#1C1C1C',
+          boxShadow: 'none',
+          borderBottom: '1px solid #E0E0E0',
+        },
+      },
     },
   },
 });
 
-export default theme
+export default theme;

@@ -7,7 +7,7 @@ import ParaBanner from '@/components/parallax';
 
 export default function ServicesPage() {
   return (
-    <Box sx={{ mt: -2 }}>
+    <Box sx={{ mt: -4 }}>
       {/* Hero Section */}
       <Box
         sx={{

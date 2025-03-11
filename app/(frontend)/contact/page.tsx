@@ -35,7 +35,7 @@ export default function ContactPage() {
   };
 
   return (
-    <Box sx={{ mt: -2 }}>
+    <Box sx={{ mt: -4 }}>
       {/* Hero Section */}
       <Box
         sx={{
