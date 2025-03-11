@@ -41,7 +41,6 @@ export default function ParaBanner({ url, headline, subtext }: ParallaxProps) {
                             </Typography>
                             <Typography variant="h5" sx={{
                                 color: 'white',
-                                maxWidth: '800px',
                                 textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
                                 position: 'relative',
                                 top: '30%'
